@@ -15,6 +15,14 @@ export default {
   publicRuntimeConfig: {
     NODE_ENV: env.NODE_ENV,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
   /** We run eslint as a separate task in CI */
   eslint: { ignoreDuringBuilds: !!process.env.CI },
   /** We run typechecking as a separate task in CI */
